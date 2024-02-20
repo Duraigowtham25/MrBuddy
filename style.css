@@ -1,65 +1,122 @@
-*{
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
 }
-nav{
+
+/* Fixed header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: rgb(246, 153, 86);
     color: azure;
-    padding:15px; 
+    padding: 10px; /* Adjusted padding for a smaller header */
+    z-index: 1000; /* Ensure it stays above other content */
 }
-li,ul,h1{
+
+/* Navigation styles */
+nav {
+    padding: 5px; /* Adjusted padding for smaller navigation */
+}
+
+h1#head1 {
+    margin-left: 10px; /* Adjusted margin for smaller header */
+    font-size: 24px; /* Adjusted font size for smaller header */
+}
+
+ul {
+    margin-left: 10px; /* Adjusted margin for smaller header */
+}
+
+li {
     display: inline;
-}
-ul{
-    margin-left:25%;
-}
-li:hover{
-    color:rgb(133, 255, 72)
+    margin-right: 10px;
 }
 
-li{
+li:hover {
+    color: rgb(133, 255, 72);
     cursor: pointer;
-}  
+}
 
-img{
-     max-width: 100%;
+/* Content styles */
+.Home,
+.Products,
+.AboutUs,
+.ContactUs {
+    margin-top: 40px; /* Ensure content is below the fixed header */
+    padding: 20px;
+}
+
+.Products hr,
+.AboutUs hr,
+.ContactUs hr {
+    border: 1px solid #ccc;
+}
+
+.Products h1,
+.AboutUs h4,
+.ContactUs h3 {
+    text-align: center;
+}
+
+/* Footer styles */
+.Footer {
+    background-color: rgb(246, 153, 86);
+    color: azure;
+    padding: 5px; /* Adjusted padding for smaller footer */
+    text-align: center;
+}
+
+.bottom {
+    background-color: #2e2f2f;
+    color: azure;
+    padding: 5px; /* Adjusted padding for smaller footer */
+    text-align: center;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
     height: auto;
 }
-h6{
-    font-size: medium;
+
+/* Google Maps iframe styles */
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Other styles */
+h6 {
+    font-size: 14px; /* Adjusted font size for smaller header */
     font-style: italic;
     color: #25ff0dd0;
     align-items: center;
     text-align: center;
 }
-h4{
-    text-align: center;
-    color:#2e2f2f ;
-    
-}
-h5{
-    font-size: medium;
+
+h5 {
+    font-size: 16px; /* Adjusted font size for smaller header */
     font-style: italic;
     color: #f95c0e;
     align-items: center;
     text-align: center;
 }
-h3{
+
+h4,
+h5 {
+    text-align: center;
+    color: #2e2f2f;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h3 {
     color: crimson;
 }
-h4{
-   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(82, 83, 86);
-}
-.Footer{
-    background-color: rgb(246, 153, 86);
-    color: azure;
-    padding:1px; 
-}
-.bottom{
-    background-color: #2e2f2f;
-    color: azure;
-}
-.products{
-    text-align: center;
+
+/* Smooth scrolling transition */
+html {
+    scroll-behavior: smooth;
 }
